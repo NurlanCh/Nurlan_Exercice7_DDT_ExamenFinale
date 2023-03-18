@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.1 (Python 3.10.7 on win32)" generated="20230318 09:15:53.439" rpa="false" schemaversion="3">
+<suite id="s1" name="Script" source="c:\Users\chula\ExamenFinaleExercice7DDT\test cases\script.robot">
+<kw name="Login" library="resource" type="SETUP">
+<kw name="Set Selenium Timeout" library="SeleniumLibrary">
+<arg>${TIMEOUT}</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" starttime="20230318 09:15:53.786" endtime="20230318 09:15:53.787"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230318 09:15:53.788" level="INFO">Opening browser 'chrome' to base url 'http://tutorialsninja.com/demo/index.php?route=common/home'.</msg>
+<status status="PASS" starttime="20230318 09:15:53.787" endtime="20230318 09:15:57.220"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230318 09:15:57.220" endtime="20230318 09:15:57.354"/>
+</kw>
+<status status="PASS" starttime="20230318 09:15:53.785" endtime="20230318 09:15:57.355"/>
+</kw>
+<test id="s1-t1" name="produit invalide 1" line="12">
+<kw name="L'utilisateur est informé lorsque les produits avec les noms invalides ne sont pas disponibles">
+<arg>samsungwww</arg>
+<doc>Test case pour verifier que l'utilisateur est informé lorsque le produit avec le nom invalide n'est pas disponible</doc>
+<kw name="Saisir le produit avec le nom invalide sur le champ de recherche" library="resource">
+<arg>${val_search_Invalide}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_Search}</arg>
+<arg>${val_search_Invalide}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230318 09:15:57.359" level="INFO">Typing text 'samsungwww' into text field 'xpath=//input[@name='search']'.</msg>
+<status status="PASS" starttime="20230318 09:15:57.358" endtime="20230318 09:15:57.512"/>
+</kw>
+<status status="PASS" starttime="20230318 09:15:57.357" endtime="20230318 09:15:57.513"/>
+</kw>
+<kw name="Cliquer sur le bouton recherche" library="resource">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${btn_Search}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230318 09:15:57.516" endtime="20230318 09:15:57.558"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${btn_Search}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230318 09:15:57.560" level="INFO">Clicking button 'xpath=//button[@class='btn btn-default btn-lg']'.</msg>
+<status status="PASS" starttime="20230318 09:15:57.558" endtime="20230318 09:15:58.061"/>
+</kw>
+<status status="PASS" starttime="20230318 09:15:57.514" endtime="20230318 09:15:58.062"/>
+</kw>
+<kw name="Critère de succès: le message d'indisponibilité s'affiche" library="resource">
+<arg>${val_messageNoAvailable}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${lbl_NoProductAvailable}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230318 09:15:58.064" endtime="20230318 09:15:58.110"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${val_messageNoAvailable}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230318 09:15:58.129" level="INFO">Current page contains text 'There is no product that matches the search criteria.'.</msg>
+<status status="PASS" starttime="20230318 09:15:58.110" endtime="20230318 09:15:58.129"/>
+</kw>
+<status status="PASS" starttime="20230318 09:15:58.063" endtime="20230318 09:15:58.130"/>
+</kw>
+<status status="PASS" starttime="20230318 09:15:57.356" endtime="20230318 09:15:58.131"/>
+</kw>
+<status status="PASS" starttime="20230318 09:15:57.355" endtime="20230318 09:15:58.132"/>
+</test>
+<test id="s1-t2" name="produit invalide 2" line="13">
+<kw name="L'utilisateur est informé lorsque les produits avec les noms invalides ne sont pas disponibles">
+<arg>888</arg>
+<doc>Test case pour verifier que l'utilisateur est informé lorsque le produit avec le nom invalide n'est pas disponible</doc>
+<kw name="Saisir le produit avec le nom invalide sur le champ de recherche" library="resource">
+<arg>${val_search_Invalide}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_Search}</arg>
+<arg>${val_search_Invalide}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230318 09:15:58.138" level="INFO">Typing text '888' into text field 'xpath=//input[@name='search']'.</msg>
+<status status="PASS" starttime="20230318 09:15:58.138" endtime="20230318 09:15:58.242"/>
+</kw>
+<status status="PASS" starttime="20230318 09:15:58.136" endtime="20230318 09:15:58.242"/>
+</kw>
+<kw name="Cliquer sur le bouton recherche" library="resource">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${btn_Search}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230318 09:15:58.243" endtime="20230318 09:15:58.277"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${btn_Search}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230318 09:15:58.279" level="INFO">Clicking button 'xpath=//button[@class='btn btn-default btn-lg']'.</msg>
+<status status="PASS" starttime="20230318 09:15:58.278" endtime="20230318 09:15:58.708"/>
+</kw>
+<status status="PASS" starttime="20230318 09:15:58.243" endtime="20230318 09:15:58.709"/>
+</kw>
+<kw name="Critère de succès: le message d'indisponibilité s'affiche" library="resource">
+<arg>${val_messageNoAvailable}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${lbl_NoProductAvailable}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230318 09:15:58.711" endtime="20230318 09:15:58.740"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${val_messageNoAvailable}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230318 09:15:58.754" level="INFO">Current page contains text 'There is no product that matches the search criteria.'.</msg>
+<status status="PASS" starttime="20230318 09:15:58.740" endtime="20230318 09:15:58.754"/>
+</kw>
+<status status="PASS" starttime="20230318 09:15:58.709" endtime="20230318 09:15:58.755"/>
+</kw>
+<status status="PASS" starttime="20230318 09:15:58.136" endtime="20230318 09:15:58.755"/>
+</kw>
+<status status="PASS" starttime="20230318 09:15:58.134" endtime="20230318 09:15:58.756"/>
+</test>
+<test id="s1-t3" name="produit invalide 3" line="14">
+<kw name="L'utilisateur est informé lorsque les produits avec les noms invalides ne sont pas disponibles">
+<arg>iPodgfdsa</arg>
+<doc>Test case pour verifier que l'utilisateur est informé lorsque le produit avec le nom invalide n'est pas disponible</doc>
+<kw name="Saisir le produit avec le nom invalide sur le champ de recherche" library="resource">
+<arg>${val_search_Invalide}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_Search}</arg>
+<arg>${val_search_Invalide}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230318 09:15:58.763" level="INFO">Typing text 'iPodgfdsa' into text field 'xpath=//input[@name='search']'.</msg>
+<status status="PASS" starttime="20230318 09:15:58.761" endtime="20230318 09:15:58.876"/>
+</kw>
+<status status="PASS" starttime="20230318 09:15:58.760" endtime="20230318 09:15:58.876"/>
+</kw>
+<kw name="Cliquer sur le bouton recherche" library="resource">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${btn_Search}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230318 09:15:58.878" endtime="20230318 09:15:58.903"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${btn_Search}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230318 09:15:58.904" level="INFO">Clicking button 'xpath=//button[@class='btn btn-default btn-lg']'.</msg>
+<status status="PASS" starttime="20230318 09:15:58.903" endtime="20230318 09:15:59.353"/>
+</kw>
+<status status="PASS" starttime="20230318 09:15:58.877" endtime="20230318 09:15:59.354"/>
+</kw>
+<kw name="Critère de succès: le message d'indisponibilité s'affiche" library="resource">
+<arg>${val_messageNoAvailable}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${lbl_NoProductAvailable}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230318 09:15:59.355" endtime="20230318 09:15:59.380"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${val_messageNoAvailable}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230318 09:15:59.392" level="INFO">Current page contains text 'There is no product that matches the search criteria.'.</msg>
+<status status="PASS" starttime="20230318 09:15:59.381" endtime="20230318 09:15:59.393"/>
+</kw>
+<status status="PASS" starttime="20230318 09:15:59.354" endtime="20230318 09:15:59.393"/>
+</kw>
+<status status="PASS" starttime="20230318 09:15:58.759" endtime="20230318 09:15:59.394"/>
+</kw>
+<status status="PASS" starttime="20230318 09:15:58.758" endtime="20230318 09:15:59.395"/>
+</test>
+<kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20230318 09:15:59.398" endtime="20230318 09:16:01.616"/>
+</kw>
+<status status="PASS" starttime="20230318 09:15:53.445" endtime="20230318 09:16:01.617"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="0" skip="0" id="s1" name="Script">Script</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
